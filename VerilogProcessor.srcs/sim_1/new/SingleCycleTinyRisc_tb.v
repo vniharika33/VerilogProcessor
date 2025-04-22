@@ -33,11 +33,10 @@ module SingleCycleTinyRisc_tb;
     // Outputs from the processor
     wire [31:0] pc;
     wire [31:0] inst;
-    wire [31:0] memoryAddress;
-    wire [31:0] dataMemWriteData;
+    
     wire isBranchTaken;
     wire isAdd, isSub, isSt, isLd, isMul;
-    wire [31:0] branchPC, aluResult;
+    wire [31:0] branchPC;
     wire [31:0] op1, op2;
 
     // Instantiate the SingleCycleTinyRisc module
@@ -62,7 +61,7 @@ module SingleCycleTinyRisc_tb;
         .branchPC(branchPC),
         .aluResult(aluResult)
     );
-
+    
     // Clock generation
     initial begin
         clk = 0;
@@ -71,8 +70,8 @@ module SingleCycleTinyRisc_tb;
 
     // Apply test cases
     initial begin
-        $monitor("Time: %0d | PC: %h | Inst: %h | ALUResult: %h | MemAddr: %h | BranchTaken: %b",
-                 $time, pc, inst, aluResult, memoryAddress, isBranchTaken);
+        $monitor("Time: %0d | PC: %h | Inst: %h |  BranchTaken: %b",
+                 $time, pc, inst,  isBranchTaken);
 
         // Initialize inputs
         reset = 1;
@@ -107,5 +106,7 @@ module SingleCycleTinyRisc_tb;
         $display("✅ SingleCycleTinyRisc Test Completed!");
         $finish; // End simulation
     end
+    
 
 endmodule
+
