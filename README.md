@@ -10,7 +10,7 @@ The testbench files and source files are there in VerilogProcessor.srcs
 
 We have also given different testbenches for different units in order to verify properly.It is showing correct output when checked this way.
 
-Sample output :
+Sample output of ALUunit :
 
 ![image](https://github.com/user-attachments/assets/1f2c495f-3b9c-4f77-b1af-4ba4f6e63c7d)
 
