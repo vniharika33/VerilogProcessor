@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Apr 17 07:31:07 2025
+# Process ID         : 10716
+# Current directory  : C:/Users/V.Niharika/Desktop/COA/VerilogProcessor/VerilogProcessor.runs/synth_1
+# Command line       : vivado.exe -log SingleCycleTinyRisc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SingleCycleTinyRisc.tcl
+# Log file           : C:/Users/V.Niharika/Desktop/COA/VerilogProcessor/VerilogProcessor.runs/synth_1/SingleCycleTinyRisc.vds
+# Journal file       : C:/Users/V.Niharika/Desktop/COA/VerilogProcessor/VerilogProcessor.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-4LM1MAQ
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1360P
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16849 MB
+# Swap memory        : 12348 MB
+# Total Virtual      : 29197 MB
+# Available Virtual  : 11586 MB
+#-----------------------------------------------------------
+source SingleCycleTinyRisc.tcl -notrace
+Command: synth_design -top SingleCycleTinyRisc -part xc7a12ticsg325-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5052
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 807.871 ; gain = 479.336
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'SingleCycleTinyRisc' [C:/Users/V.Niharika/Desktop/COA/VerilogProcessor/VerilogProcessor.srcs/sources_1/new/SingleCycleTinyRisc.v:23]
+INFO: [Synth 8-6157] synthesizing module 'InstructionFetchUnit' [C:/Users/V.Niharika/Desktop/COA/VerilogProcessor/VerilogProcessor.srcs/sources_1/new/InstructionFetchUnit.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionFetchUnit' (0#1) [C:/Users/V.Niharika/Desktop/COA/VerilogProcessor/VerilogProcessor.srcs/sources_1/new/InstructionFetchUnit.v:23]
+ERROR: [Synth 8-685] variable 'programCounter' should not be used in output port connection [C:/Users/V.Niharika/Desktop/COA/VerilogProcessor/VerilogProcessor.srcs/sources_1/new/SingleCycleTinyRisc.v:50]
+ERROR: [Synth 8-6156] failed synthesizing module 'SingleCycleTinyRisc' [C:/Users/V.Niharika/Desktop/COA/VerilogProcessor/VerilogProcessor.srcs/sources_1/new/SingleCycleTinyRisc.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 913.742 ; gain = 585.207
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+8 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 17 07:31:16 2025...
